@@ -1,9 +1,70 @@
+@font-face {
+  font-family: 'badbrush';
+  src: url('./fonts/BadBrush-RpD6l.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'danger';
+  src: url('./fonts/DangerZone-w1Pe3.ttf') format('truetype');
+}
+
+:root{
+    --heightimg:calc(100vh - 5rem);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+main{
+    display: flex;
+    gap: 1rem;
+    background-color: aliceblue;
+    align-items: center;
+}
+.left{
+    position: relative;
+}
 
+.name{
+    position:absolute;
+    top: 5%;
+    left: 5%;
+    font-size:calc(var(--heightimg)/5);
+    font-family: badbrush;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* gradient */
+  -webkit-background-clip: text;   /* clips background to text */
+  -webkit-text-fill-color: transparent;
+}
+
+.signup{
+    position: absolute;
+    top: 80%; 
+    left: 0; 
+    width: 100%; 
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(128, 128, 128, 0.625); 
+    padding: 0.5rem 0; 
+    font-size:calc(var(--heightimg)/30);
+    font-family: danger;
+}
+
+.textbg{
+     background: radial-gradient(circle, #fe0000, #000000, #ff0000); /* gradient */
+  -webkit-background-clip: text;   /* clips background to text */
+  -webkit-text-fill-color: transparent;
+}
+.left .image img{
+    width:100vh;
+    height: var(--heightimg);
+    object-fit: cover;
+}
+
+.right{
+    padding-left: 5rem;
+}
 .footer{
     min-height: 5rem;
     display: flex;
@@ -47,7 +108,6 @@
   flex-shrink:0;
 }
 .github img:hover{
-    transform: scale(1.2) rotate(180deg);
+    transform: scale(1.6) rotate(180deg);
     transition: transform 0.3s ease-in, transform 2.5s ease-out;
 }
-
