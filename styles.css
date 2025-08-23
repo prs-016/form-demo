@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer{
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.copytext{
+    color:black;
+    font-family: 'gunplay';
+    font-size: 1.25rem;
+}
+
+.github{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    object-fit: cover;       
+    overflow: hidden;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    margin: 0px;
+    
+    
+}
+.github img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 1.75s ease;
+  flex-shrink:0;
+}
+.github img:hover{
+    transform: scale(1.2) rotate(180deg);
+    transition: transform 0.3s ease-in, transform 2.5s ease-out;
+}
+
