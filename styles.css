@@ -8,8 +8,13 @@
   src: url('./fonts/DangerZone-w1Pe3.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'scriptin';
+  src: url('fonts/SCRIPTIN.ttf') format('truetype');
+}
+
 :root{
-    --heightimg:calc(100vh - 5rem);
+    --heightimg:100vh;
 }
 
 * {
@@ -20,7 +25,7 @@
 main{
     display: flex;
     gap: 1rem;
-    background-color: aliceblue;
+    background-color: rgba(91, 0, 0, 0.833); 
     align-items: center;
 }
 .left{
@@ -52,7 +57,7 @@ main{
 }
 
 .textbg{
-     background: radial-gradient(circle, #fe0000, #000000, #ff0000); /* gradient */
+    background: radial-gradient(circle, #fe0000, #000000, #ff0000); /* gradient */
   -webkit-background-clip: text;   /* clips background to text */
   -webkit-text-fill-color: transparent;
 }
@@ -63,13 +68,105 @@ main{
 }
 
 .right{
-    padding-left: 5rem;
-}
-.footer{
-    min-height: 5rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+    height: 100vh; 
+    width: 100vh;
+}
+
+.title{
+    font-family: scriptin;
+    padding-top: 1vh;
+    align-self: flex-start;
+    padding-left: 10vh;
+    font-size: 5vh;
+    background: linear-gradient(.25turn, black, 70%, white); /* gradient */
+  -webkit-background-clip: text;   /* clips background to text */
+  -webkit-text-fill-color: transparent;
+}
+
+form{
+    align-self: center;
+    padding-left: 5vh;
+    font-size: 1.5vh;
+    font-family: badbrush;
+    box-shadow: 
+    5px 0 5px -2px rgba(0,0,0,0.5),   /* right */
+   -5px 0 5px -2px rgba(0,0,0,0.5),   /* left */
+    0 5px 5px -2px rgba(0,0,0,0.5),   /* bottom */
+    0 -5px 5px -2px rgba(0,0,0,0.5);
+    width: 60vh;
+}
+
+.container input, .container select{
+    padding-bottom: 1vh;
+    padding-left: 0.25vh;
+    width: 50vh;
+}
+
+.container input::placeholder{
+  font-family: "Courier New", monospace; /* change font */
+  font-size: 14px;                       /* change size */
+  color: #888;                           /* change color */
+  font-style: italic;                    /* optional */
+}
+
+.honorific option:disabled{
+    font-family: "Courier New", monospace; /* change font */
+    font-size: 14px;                       /* change size */
+    color: #888;                           /* change color */
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+}
+
+button{
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    margin-left: 13vh;
+    width: 12.5rem;
+    height: 2.75rem;
+    font-size: 1.5rem;
+    background: black;
+    color: red;
+    border: 0;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.18); 
+    font-family: danger;
+    cursor: pointer;
+    transition: color 2s ease, transform 1s ease, cursor 0.2s ease,box-shadow 1.2s;
+}
+
+.login{
+    margin-left: 10vh;
+}
+
+button:hover {
+  transform: scale(1.2);    
+}
+button:active {
+  transform: scale(0.9); 
+  transition: transform 1.25s ease-in, transform 1.25s ease-out;
+  cursor: wait; 
+  color: green;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.3); 
+
+}
+button:focus {
+  outline: none;
+}
+
+
+.footer{
+    display: flex;
+    align-items:center;
+    align-self: flex-end;
     justify-content:center;
+    padding-bottom: 1vh;
+    padding-right: 20vh;
 }
 
 .copyright{
@@ -82,7 +179,7 @@ main{
 
 .copytext{
     color:black;
-    font-family: 'gunplay';
+    font-family: 'danger';
     font-size: 1.25rem;
 }
 
@@ -110,4 +207,29 @@ main{
 .github img:hover{
     transform: scale(1.6) rotate(180deg);
     transition: transform 0.3s ease-in, transform 2.5s ease-out;
+}
+
+a{
+    color: rgb(0, 112, 239);
+    transition: color 1s ease-in;
+}
+a:hover {
+  color: rgb(0, 255, 238);              
+  text-decoration: underline;
+}
+
+
+input:valid{
+    border: 2px solid green;
+    box-shadow: 0px 4px 8px green;
+}
+
+input:invalid{
+    border: 2px solid red;
+    box-shadow: 0px 4px 8px red;
+}
+
+select{
+    border: 2px solid red;
+    box-shadow: 0px 4px 8px red;
 }

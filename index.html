@@ -6,6 +6,7 @@
     <title>Form</title>
     <link rel = "stylesheet" href="./styles.css">
 </head>
+<body>
     <main>
         <div class ="left">
             <div class="image"><img src = "./images/enrico-miglioranza-W3eJHKcTVpY-unsplash.jpg" alt="f1"></div>
@@ -14,11 +15,11 @@
         </div>
         <div class = "right">
             <div class="title">Get Started</div>
-            <form action="" method="">
+            <form action="" method="" class="form">
                 <div class="container">
                     <div class="text">Title:</div>
                     <select name="honorific" id="" class="honorific">
-                        <option value="" disabled selected hidden>--Please select an Option--</option>
+                        <option disabled selected>--Please select an Option--</option>
                         <option value="Mr">Mr.</option>
                         <option value="Mrs">Mrs.</option>
                         <option value="Ms">Ms.</option>
@@ -57,29 +58,33 @@
                 <div class="container">
                     <label for="pwd">
                         <div class="text">Password:</div>
-                        <input type="password" placeholder="Enter Password(must be at least 8 characters):" id="pwd" pattern=".{8,}" required="required">
+                        <input type="password" placeholder="Enter Password(must be at least 8 chars):" id="pwd" pattern=".{8,}" required="required">
+                    </label>
+                </div>
+                <div class="container">
+                    <label for="cpwd">
+                        <div class="text">Confirm Password:</div>
+                        <input type="password" placeholder="Confirm Password:" id="cpwd" pattern=".{8,}" required="required">
                     </label>
                 </div>
                 <div class="btn">
                     <button class="submit-btn" type="submit">Create Account</button>
-                    <div class="login">Already Have an Account...?<a href="https://account.formula1.com/#/en/register?redirect=https%3A%2F%2Fwww.formula1.com%2Fen&lead_source=web_f1core" target="_blank" rel="noopener noreferrer">Log In</a></div>
+                    <div class="login">Already Have an Account...?<a href="https://account.formula1.com/#/en/register?redirect=https%3A%2F%2Fwww.formula1.com%2Fen&lead_source=web_f1core" target="_blank" rel="noopener noreferrer"> Log In</a></div>
                 </div> 
             </form>
-        </div>
-    </main>
-    <div class = "footer">
-        <div class = "copyright">
-            <div class = "copytext">
-                Copyright<span> &#169 </span>The Odin Project <script>document.write(new Date().getFullYear());</script> @
+            <div class = "footer">
+                <div class = "copyright">
+                <div class = "copytext">
+                    Copyright<span> &#169 </span>The Odin Project <script>document.write(new Date().getFullYear());</script> @
+                </div>
+                <div class = "github">
+                    <a href="https://github.com/prs-016/form-demo#" target="_blank" rel="noopener">
+                        <img src="./images/github.png" , alt="github">
+                    </a>
+                </div>
             </div>
-            <div class = "github">
-                <a href="https://github.com/prs-016/form-demo#" target="_blank" rel="noopener">
-                    <img src="./images/github.png" , alt="github">
-                </a>
-            </div>
         </div>
-    </div>
-<body>
-    
+    </main> 
+    <script src="./script.js"></script>   
 </body>
 </html>
